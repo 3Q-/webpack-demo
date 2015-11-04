@@ -1,3 +1,5 @@
+
+
 1.开发
 webpack-dev-server --hot --inline
 访问 localhost:8888/webpack-dev-server 可以访问编译后(在你的文件夹里看不到,听说存在内存里了^.^)的的文件,可以保存刷新,但是修改html无效(鄙视);

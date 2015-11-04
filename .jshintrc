@@ -1,0 +1,28 @@
+{
+  "nonew": true,
+  "jquery": true,
+  "curly": true,
+  "noarg": true,
+  "loopfunc": true,
+  "forin": true,
+  "noempty": true,
+  "node": true,
+  "eqeqeq": true,
+  "strict": true,
+  "undef": true,
+  "unused": false,
+  "bitwise": true,
+  "browser": true,
+  "devel": true,
+  "quotmark": false,
+  "predef": [
+    "define",
+    "require",
+    "easyDialog",
+    "spath",
+    "vpath",
+    "surl",
+    "requirejs",
+    "webData"
+  ]
+}
