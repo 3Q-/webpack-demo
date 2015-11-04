@@ -5,21 +5,29 @@ var fs = require('fs');
 var commonsPlugin = webpack.optimize.CommonsChunkPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var Clean = require('clean-webpack-plugin');
 var tools = require('./tools/tools');
 var webpackPlgins = [];
 var entry = {};
 
+
+// 获取入口文件 (想要打包的js)
 var project_script_files = tools.getFilesList({
     url: './src',
     ext: '.js',
+    // 剔除这些文件夹不遍历
     exclude: ['styles', 'images', 'modules', 'tpl', 'sass', 'html']
 });
+
+//  获取html文件  //
 var project_html_files = tools.getFilesList({
     url: './src',
     ext: '.html',
+     // 剔除这些文件夹不遍历
     exclude: ['styles', 'images', 'modules', 'tpl', 'sass', 'script'],
 });
+// ps: js入口文件跟html文件名称.结构要一样 (比如 scripts/index.js 对应 html/index.html   script/exam/indwx.js  对应html/exam/index.html)
+// 有这个限制是因为webpack的入口文件都是要手动配置, 这里用了node来读取文件,所以要文件结构相同 方便做匹配
+// 有了这个限制 注定做不了多人协同开发
 
 project_script_files.forEach(function(script, j) {
 
@@ -64,12 +72,13 @@ project_script_files.forEach(function(script, j) {
 
 });
 
-
+// jquery做为一个单独的入口文件 可以多个公共插件
 entry.vendors = ['jquery'];
 //entry.index.unshift('webpack/hot/dev-server');
 webpackPlgins.push(
+    // 把放公共的插件的入口文件打到common
     new commonsPlugin('vendors', 'scripts/vendors.js?[hash:9]'),
-    //提出样式
+    //提出单独样式
     new ExtractTextPlugin('styles/[name].css?[contenthash:9]'),
     //公共组建 比如jquery  不用每个文件都require一次 直接$
     new webpack.ProvidePlugin({
