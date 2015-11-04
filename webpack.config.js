@@ -25,6 +25,7 @@ var project_html_files = tools.getFilesList({
      // 剔除这些文件夹不遍历
     exclude: ['styles', 'images', 'modules', 'tpl', 'sass', 'script'],
 });
+
 // ps: js入口文件跟html文件名称.结构要一样 (比如 scripts/index.js 对应 html/index.html   script/exam/indwx.js  对应html/exam/index.html)
 // 有这个限制是因为webpack的入口文件都是要手动配置, 这里用了node来读取文件,所以要文件结构相同 方便做匹配
 // 有了这个限制 注定做不了多人协同开发
@@ -43,8 +44,8 @@ project_script_files.forEach(function(script, j) {
 
         var html = project_html_files[i];
 
-        var htmlMatch = html.replace('.html', '.js').replace('/html/', '/scripts/');
-
+        // 懒得写正则了去匹配了 替换字符串就行
+        var htmlMatch = html.replace('.html', '.js').replace('/html/', '/scripts/').replace('\\html\\','\\scripts\\');
         // 匹配文件 html和js入口文件
         if (htmlMatch === script) {
 
