@@ -3,7 +3,6 @@ var fs = require('fs');
 var path = require('path');
 var merge = require('merge-stream');
 
-
 var core = {
 
     getFiles: function(dir) {
