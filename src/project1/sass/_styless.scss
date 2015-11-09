@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/utilities/sprites";    // 加载compass sprites模块
+@import "share/*.png";                    // 导入share目录下所有png图片
+@include all-share-sprites;
+
+@include share-sprites(lte20px-icon_01);
+@include share-sprites(lte20px-icon_03);
+@include share-sprites(lte20px-icon_05);
+@include share-sprites(lte20px-icon_10);
+
+body{
+    background:#ccc;
+    div{
+        margin:0;
+        padding:0;
+    }
+
+}
+
+div{
+    margin:10px;
+     background-image: url('../../../src/project1/images/aab.png');
+
+}
+
+

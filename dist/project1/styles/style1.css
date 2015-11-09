@@ -1,0 +1,35 @@
+/* line 80, shareFf/*.png */
+.shareFf-sprite, .shareFf-lte20px-icon_01, .shareFf-lte20px-icon_03, .shareFf-lte20px-icon_05, .shareFf-lte20px-icon_10 {
+  background-image: url('../images/shareFf-sffe3ab25d3.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.shareFf-lte20px-icon_01 {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.shareFf-lte20px-icon_03 {
+  background-position: 0 -16px;
+}
+
+/* line 84, ../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.shareFf-lte20px-icon_05 {
+  background-position: 0 -28px;
+}
+
+/* line 84, ../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.shareFf-lte20px-icon_10 {
+  background-position: 0 -43px;
+}
+
+/* line 12, ../../../src/project1/sass/style1.scss */
+body {
+  background: #ccc;
+}
+/* line 15, ../../../src/project1/sass/style1.scss */
+body div {
+  margin: 0;
+  padding: 0;
+}

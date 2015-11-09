@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import "compass/utilities/sprites";    // 加载compass sprites模块
+@import "shareFf/*.png";                    // 导入share目录下所有png图片
+//@include all-share-sprites;
+
+@include shareFf-sprites(lte20px-icon_01);
+@include shareFf-sprites(lte20px-icon_03);
+@include shareFf-sprites(lte20px-icon_05);
+@include shareFf-sprites(lte20px-icon_10);
+
+body{
+    background:#ccc;
+
+    div{
+        margin:0;
+        padding:0;
+    }
+
+}

@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+@import './sprite/sprite';
+
+.icon-camera {
+  @include sprite($lte20px-icon_01);
+}

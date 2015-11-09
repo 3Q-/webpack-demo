@@ -1,0 +1,11 @@
+.icon-camera {
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 23px;
+  height: 24px; }
+body{
+    font-size:20px;
+    background: url(../images/aab.png);
+}

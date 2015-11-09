@@ -1,0 +1,9 @@
+/* line 3, ../../../src/project2/sass/style1.scss */
+body {
+  background: #ccc;
+}
+/* line 6, ../../../src/project2/sass/style1.scss */
+body div {
+  margin: 0;
+  padding: 0;
+}
