@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title><%= o.htmlWebpackPlugin.options.title %></title>
-    <meta keyword="{{o.htmlWebpackPlugin.options.title}}">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta keyword="{{htmlWebpackPlugin.options.title}}">
 </head>
 <body>
     <!-- @secret client_id -->
@@ -15,7 +15,6 @@
             </ul>
         </div>
     </div>
-    {{> demo.hbs}}
     <div class="content"></div>
     <div class="footer"></div>
     <div class="bg"></div>

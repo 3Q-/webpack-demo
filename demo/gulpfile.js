@@ -11,12 +11,6 @@ var gulp = require('gulp'),
     webpackConfig = require('./webpack.config.js'),
     port = 8888;
 
-gulpPlugins.merge = require('merge-stream');
-gulpPlugins.runSequence = require('run-sequence');
-gulpPlugins.pngquant = require('imagemin-pngquant');
-gulpPlugins.del = require('del');
-gulpPlugins.sprity = require('sprity');
-
 gulp.task("build", function(callback) {
 
     // modify some webpack config options
@@ -86,4 +80,6 @@ gulp.task('webpack-dev-server', function() {
 gulp.task('serve', ['build-dev'], function() {
     gulp.watch(['src/**/*'], ['build-dev']);
 });
+
+
 gulp.task('default', ['webpack-dev-server']);

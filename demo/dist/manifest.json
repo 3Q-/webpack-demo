@@ -1,8 +1,8 @@
 {
-  "demo.js": "scripts/demo.js?8b0a2e553",
-  "exam/index.js": "scripts/exam/index.js?3bbc31027",
-  "index.js": "scripts/index.js?d6fef5a2d",
-  "list.js": "scripts/list.js?1efbeb08d",
-  "vendors.js": "scripts/vendors.js?348788ff0",
-  "vendors.css": "styles/vendors.css?72feade69"
+  "demo.js": "scripts/demo.js?8b254b6bd",
+  "exam/index.js": "scripts/exam/index.js?39612a829",
+  "index.js": "scripts/index.js?1db06e2b6",
+  "list.js": "scripts/list.js?f962d70cc",
+  "vendors.js": "scripts/vendors.js?9376345e9",
+  "vendors.css": "styles/vendors.css?ad21e6e69"
 }
