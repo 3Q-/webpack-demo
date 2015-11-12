@@ -11,16 +11,17 @@ var gulp = require('gulp'),
     webpackConfig = require('./webpack.config.js'),
     port = 8888;
 
-gulpPlugins.merge = require('merge-stream');
-gulpPlugins.runSequence = require('run-sequence');
-gulpPlugins.pngquant = require('imagemin-pngquant');
-gulpPlugins.del = require('del');
-gulpPlugins.sprity = require('sprity');
+//gulpPlugins.merge = require('merge-stream');
+//gulpPlugins.runSequence = require('run-sequence');
+//gulpPlugins.pngquant = require('imagemin-pngquant');
+//gulpPlugins.del = require('del');
+//gulpPlugins.sprity = require('sprity');
 
 gulp.task("build", function(callback) {
 
     // modify some webpack config options
     var myConfig = Object.create(webpackConfig);
+
     myConfig.plugins = myConfig.plugins.concat(
         new webpack.DefinePlugin({
             "process.env": {
@@ -33,12 +34,15 @@ gulp.task("build", function(callback) {
     );
 
     // run webpack
+
     webpack(myConfig, function(err, stats) {
+
         if (err) {
             throw new gulpPlugins.util.PluginError("webpack:build", err);
         }
         callback();
     });
+
 });
 
 
@@ -73,10 +77,13 @@ gulp.task('webpack-dev-server', function() {
             colors: true
         }
     }).listen(port, 'localhost', function(err) {
+
         if (err) {
+
             console.log('~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~');
             console.log(err);
         }
+
         console.log('~~~~~~~~~~\'^.^\'~~~~~~');
         console.log('server run at port ' + port + ' http://localhost:' + port + '/webpack-dev-server  !!!');
     });
@@ -84,6 +91,22 @@ gulp.task('webpack-dev-server', function() {
 });
 
 gulp.task('serve', ['build-dev'], function() {
+
     gulp.watch(['src/**/*'], ['build-dev']);
+
 });
+
 gulp.task('default', ['webpack-dev-server']);
+
+
+gulp.task('minify', function() {
+
+    return gulp.src('src/html/**/*.html')
+
+    .pipe(gulpPlugins.htmlmin({
+        collapseWhitespace: true
+    }))
+
+    .pipe(gulp.dest('temp/'));
+
+});
