@@ -1,0 +1,9 @@
+/* line 4, ../sass/style2.scss */
+body {
+  background: #ccc;
+}
+/* line 7, ../sass/style2.scss */
+body div {
+  margin: 0;
+  padding: 0;
+}

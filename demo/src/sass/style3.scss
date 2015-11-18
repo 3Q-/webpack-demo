@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@import "compass/utilities/sprites";    // 加载compass sprites模块
+body{
+    background:#ccc;
+
+    div{
+        margin:0;
+        padding:0;
+    }
+}

@@ -1,7 +1,7 @@
 
 //require('./style.css');
 'use strict';
-require('../styles/style.css');
+require('../styles/style1.css');
 
 var ele = require('./modules/common');
 

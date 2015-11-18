@@ -1,18 +1,1 @@
-webpackJsonp([0],[
-/* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	//require('./style.css');
-	'use strict';
-	__webpack_require__(1);
-
-	var ele = __webpack_require__(6);
-
-	console.log('This is demo~');
-
-	document.body.appendChild(ele());
-
-
-/***/ }
-]);
+webpackJsonp([0],[function(o,n,c){o.exports=c(1)},function(o,n,c){"use strict";c(2);var e=c(7);console.log("This is demo~"),document.body.appendChild(e())},function(o,n){}]);

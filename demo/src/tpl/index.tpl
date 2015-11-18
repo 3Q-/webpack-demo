@@ -1,6 +1,6 @@
 
 
-<!-- @secret client_id -->
+sourceMappingURL
 <div>
      {{> ./list.tpl}}
 </div>
